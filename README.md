@@ -223,7 +223,8 @@ scrape_configs:
 | pihole_forward_destinations  | This represent the number of forward destinations requests made by Pi-hole by destination |
 | pihole_querytypes            | This represent the number of queries made by Pi-hole by type                              |
 | pihole_status                | This represent if Pi-hole is enabled                                                      |
-
+| pihole_dns_queries_last_10min| This represent the number of DNS queries in the last full slot of 10 minutes              |
+| pihole_ads_blocked_last_10min| This represent the number of Ads blocked in the last full slot of 10 minutes              |
 
 ## Pihole-Exporter Helm Chart
 

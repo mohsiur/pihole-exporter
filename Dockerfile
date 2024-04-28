@@ -4,7 +4,7 @@ ARG ARCH=amd64
 
 FROM golang:1.21.5-alpine3.17 as builder
 
-WORKDIR /go/src/github.com/eko/pihole-exporter
+WORKDIR /go/src/github.com/mohsiur/pihole-exporter
 COPY . .
 
 RUN apk --no-cache add git alpine-sdk
@@ -17,6 +17,6 @@ FROM $IMAGE
 LABEL name="pihole-exporter"
 
 WORKDIR /root/
-COPY --from=builder /go/src/github.com/eko/pihole-exporter/binary pihole-exporter
+COPY --from=builder /go/src/github.com/mohsiur/pihole-exporter/binary pihole-exporter
 
 CMD ["./pihole-exporter"]
